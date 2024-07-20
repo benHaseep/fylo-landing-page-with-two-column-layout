@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hwb(224 19% 3%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+
+  --section-top-margin: 100px;
+  --section-mobile-padding: 25px;
+  --section-desktop-padding: 50px 130px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* ------------------------ */
+/* === Start Header === */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header img {
+  width: 100px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+
+}
+
+header nav a:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* === End Header === */
+/* ------------------------ */
+/* === Start Hook Section === */
+
+.hook {
+  margin-top: var(--section-top-margin);
+  padding: var(--section-mobile-padding);
+}
+
+.hook img {
+  max-width: 100%;
+}
+
+.hook div {
+  text-align: center;
+}
+
+.hook div h2 {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.hook div p {
+  margin-top: 30px;
+}
+
+.hook div form {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hook div form input {
+  height: 40px;
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 5px 3px 3px var(--light-grayish-blue);
+}
+
+.hook div form .email {
+  border: 2px solid var(--light-gray);
+}
+
+.hook div form .email::placeholder {
+  font-size: 15px;
+  color: var(--light-gray);
+  text-align: center;
+}
+
+.hook div form .btn {
+  /* margin-top: 20px; */
+  border: none;
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.hook div form .btn:hover {
+  filter: opacity(80%);
+}
+
+/* === End Hook Section === */
+
+/* --------------------------- */
+/* === Start Features Section === */
+.features {
+  /* background-color: #F8F8FE; */
+  background-image: url(images/bg-curve-mobile.svg);
+  background-size: cover;
+  background-position-x: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--section-top-margin);
+  padding: 100px 20px;
+}
+
+.features .illustration {
+  max-width: 100%;
+}
+
+.features .text {
+  display: flex;
+  flex-flow: column;
+}
+
+.features .text h2 {
+  align-self: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.features .text>p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.features .text a {
+  text-decoration: none;
+  color: var(--moderate-cyan);
+  align-self: center;
+  border-bottom: 2px solid var(--moderate-cyan);
+  padding-bottom: 5px;
+}
+
+.features .text a:hover {
+  filter: opacity(80%);
+}
+
+.features .text .testimonial-card {
+  background-color: #fff;
+  margin-top: 50px;
+  width: 320px;
+  align-self: center;
+  padding: 20px 30px;
+  box-shadow: 0 0 15px var(--light-gray);
+  border-radius: 5px;
+}
+
+.features .text .testimonial-card p:nth-of-type(1) {
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.features .text .testimonial-card .author {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.features .text .testimonial-card .author img {
+  border-radius: 50%;
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+
+.features .text .testimonial-card .author div .name {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.features .text .testimonial-card .author div .title {
+  font-size: 11px;
+}
+
+/* === End Features Section === */
+/* -------------------------------- */
+/* === Start CTA Section === */
+.cta {
+  background-color: var(--desaturated-blue);
+  padding: 50px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+
+.cta .text p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.cta form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+  margin: 20px auto;
+}
+
+.cta form input {
+  height: 35px;
+  box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.288);
+}
+
+
+.cta form .email::placeholder {
+  text-align: center;
+}
+
+.cta form .btn {
+  color: #fff;
+  background-color: var(--bright-blue);
+  border: none;
+  font-weight: 500;
+}
+
+.cta form .btn:hover {
+  filter: brightness(150%);
+}
+
+/* === End CTA Section === */
+/* --------------------------- */
+/* === Start Footer === */
+
+footer {
+  background-color: var(--very-dark-blue);
+  color: #fff;
+  padding: 70px 30px 10px;
+}
+
+footer .container {
+  margin: 30px 0;
+}
+
+footer .contact p {
+  margin-top: 15px;
+}
+
+footer .contact p img {
+  margin-right: 20px;
+}
+
+footer .links {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+}
+
+footer .links div {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+footer .links a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .links a:hover {
+  color: var(--bright-blue);
+}
+
+footer .social {
+  /* width: fit-content; */
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+footer .social a svg {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+footer .social a svg:hover {
+  fill: var(--bright-blue);
+  border-color: var(--bright-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: var(--bright-blue);
+}
+
+/* === End Footer === */
+/* ----------------------- */
+/* === Media Query === */
+@media (min-width: 767px) {
+
+  header {
+    padding: var(--section-desktop-padding);
+  }
+
+  header .logo {
+    width: 150px;
+  }
+
+  header nav a:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  /* ------------------------------ */
+  .hook,
+  .features {
+    padding: var(--section-desktop-padding);
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 30px;
+  }
+
+  .text,
+  .illustration {
+    width: 50%;
+  }
+
+  .hook div h2 {
+    font-size: 35px;
+  }
+
+  .hook div {
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .hook div form {
+    flex-flow: row;
+  }
+
+  .hook form .btn {
+    width: 150px;
+  }
+
+  /* --------------------------- */
+  .features {
+    background-image: url(images/bg-curve-desktop.svg);
+    background-size: cover;
+    background-position-x: center;
+    padding: 100px 130px;
+  }
+
+  .features .text h2,
+  .features .text .testimonial-card,
+  .features .text a {
+    align-self: flex-start;
+  }
+
+  /* ---------------------------- */
+  .cta {
+    padding: var(--section-desktop-padding);
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+
+  .cta .text {
+    text-align: start;
+  }
+
+  .cta form .email {
+    width: 120%;
+  }
+
+  .cta form .btn {
+    width: 70%;
+  }
+
+  /* ---------------------------- */
+  footer {
+    width: 100%;
+    padding: var(--section-desktop-padding);
+  }
+
+  footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 0;
+  }
+
+  footer .container>div {
+    width: 33%;
+  }
+
+  footer .container .links {
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  footer .social {
+    margin: 0;
+  }
+}
